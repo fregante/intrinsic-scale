@@ -1,0 +1,52 @@
+{
+  "name": "intrinsic-scale",
+  "version": "0.5.0",
+  "description": "Replicate `background-size: cover/contain` for canvas/CSS/Node/… on any type of media.",
+  "license": "MIT",
+  "repository": "bfred-it/intrinsic-scale",
+  "author": {
+    "name": "Federico Brigante",
+    "email": "bfred-it@users.noreply.github.com",
+    "url": "twitter.com/bfred_it"
+  },
+  "keywords": [
+    "browser",
+    "intrinsic",
+    "scale",
+    "css",
+    "background-size",
+    "cover",
+    "contain",
+    "media",
+    "canvas",
+    "image",
+    "video",
+    "webcam"
+  ],
+  "files": [
+    "index.js",
+    "dist/intrinsic-scale.node.js"
+  ],
+  "main": "dist/intrinsic-scale.node.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "build": "npm run es5 && npm run export && npm run minify",
+    "export": "browserify index.js --standalone getIntrinsicScale > dist/intrinsic-scale.js",
+    "minify": "uglifyjs dist/intrinsic-scale.js > dist/intrinsic-scale.min.js",
+    "es5": "babel index.js > dist/intrinsic-scale.node.js",
+    "prepublish": "npm run es5"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.1",
+    "uglifyjs": "^2.4.10"
+  }
+}
