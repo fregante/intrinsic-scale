@@ -1,4 +1,4 @@
-# intrinsic-scale [![module size](https://badge-size.herokuapp.com/bfred-it/intrinsic-scale/master/dist/intrinsic-scale.min.js) ![module gzipped size](https://badge-size.herokuapp.com/bfred-it/intrinsic-scale/master/dist/intrinsic-scale.min.js?compression=gzip)](https://github.com/bfred-it/intrinsic-scale/blob/master/dist/intrinsic-scale.min.js)
+# intrinsic-scale [![module size](https://badge-size.herokuapp.com/bfred-it/intrinsic-scale/master/dist/intrinsic-scale.node.min.js) ![module gzipped size](https://badge-size.herokuapp.com/bfred-it/intrinsic-scale/master/dist/intrinsic-scale.node.min.js?compression=gzip)](https://github.com/bfred-it/intrinsic-scale/blob/master/dist/intrinsic-scale.min.js)
 
 > Replicate `background-size: cover/contain` for canvas/CSS/Node/… on any type of media.
 
@@ -72,6 +72,7 @@ Here's an explanation of the files included in this repo
 * `dist/intrinsic-scale.js`: browser-ready file with AMD or a global variable called `getIntrinsicScale`
 * `dist/intrinsic-scale.min.js`: same as above, minified
 * `dist/intrinsic-scale.node.js`: used by node/browserify with `require('intrinsic-scale')`
+* `dist/intrinsic-scale.node.min.js`: same as above, but minified, for byte counting only
 
 ## Dependencies
 
