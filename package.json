@@ -1,6 +1,6 @@
 {
   "name": "intrinsic-scale",
-  "version": "0.5.1",
+  "version": "1.0.0",
   "description": "Replicate `background-size: cover/contain` (scale+crop) for canvas/CSS/Node/… on any type of media.",
   "license": "MIT",
   "repository": "bfred-it/intrinsic-scale",
@@ -34,21 +34,11 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "build": "npm run es5 && npm run export && npm run minify",
-    "export": "browserify index.js --standalone getIntrinsicScale > dist/intrinsic-scale.js",
-    "minify": "uglifyjs dist/intrinsic-scale.js > dist/intrinsic-scale.min.js",
-    "es5": "babel index.js > dist/intrinsic-scale.node.js",
-    "prepublish": "npm run es5"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
+    "build": "./node_modules/bfred-npm-bundler/tasks/all.sh index.js getIntrinsicScale intrinsic-scale",
+    "to-npm": "./node_modules/bfred-npm-bundler/tasks/to-npm.sh index.js intrinsic-scale",
+    "prepublish": "npm run to-npm"
   },
   "devDependencies": {
-    "babel": "^5.8.21",
-    "babelify": "^6.1.3",
-    "browserify": "^11.0.1",
-    "uglifyjs": "^2.4.10"
+    "bfred-npm-bundler": "^1.1.2"
   }
 }
