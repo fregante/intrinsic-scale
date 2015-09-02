@@ -54,11 +54,6 @@ var getIntrinsicScale = require('intrinsic-scale');
 
 parameter | description
 --- | ---
-object
-object
-boolean
-object
-
 **`peg`** | Type: `object`, *required* <br> Original width/height of the object to scale
 **`hole`** | Type: `object`, *required* <br> Container that the peg needs to fit into (css:contain) or cover completely (css:cover)
 **`cover`** | Type: `boolean`, *default:true* <br> Whether it should cover the hole (`true`) or fit into it (`false`)
