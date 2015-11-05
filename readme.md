@@ -50,7 +50,7 @@ var getIntrinsicScale = require('intrinsic-scale');
 
 ## API
 
-### `getIntrinsicScale(media[, scale])`
+### `getIntrinsicScale(peg, hole[, cover])`
 
 parameter | description
 --- | ---
@@ -77,7 +77,7 @@ No dependencies. It works in the browser and in node.
 
 * http://www.syfy.com/ascension-quiz/ — Makes media fit a "passport photo" format (*media* being an uploaded image, a photo from Facebook or a webcam grab).
 * http://bfred-it.github.io/art-cropper/ — Crops images making them fill a pre-set area.
-* 
+
 ## License
 
 MIT © [Federico Brigante](http://twitter.com/bfred_it)
