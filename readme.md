@@ -2,7 +2,7 @@
 
 > Replicate `background-size: cover/contain` for canvas/CSS/Node/… on any type of media.
 
-> **Warning:** now this is just a copy of ES6-only [sroucheray/contain-cover](https://github.com/sroucheray/contain-cover). Use that module instead or download v1 of this if you need ES5 compatibility.
+> **Warning:** now this is just a copy of ES6-only [sroucheray/contain-cover](https://github.com/sroucheray/contain-cover). Use that module instead or download [v1 of this](https://github.com/bfred-it/intrinsic-scale/tree/6a0c43792d1fcd2a5abfc52d5851fa78111e3de2) if you need ES5 compatibility.
 
 Given a *original* height and width, and a *desired* height and width, get the `width`, `height`, and `scale` that the *original* object should have to fit the *desired* object.
 
