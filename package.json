@@ -26,10 +26,19 @@
     "css"
   ],
   "files": [
-    "index.js"
+    "index.js",
+    "dist/intrinsic-scale.node.js"
   ],
-  "main": "index.js",
-  "dependencies": {
-    "contain-cover": "^0.2.1"
+  "main": "dist/intrinsic-scale.node.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "build": "./node_modules/bfred-npm-bundler/tasks/all.sh index.js getIntrinsicScale intrinsic-scale",
+    "to-npm": "./node_modules/bfred-npm-bundler/tasks/to-npm.sh index.js intrinsic-scale",
+    "prepublish": "npm run to-npm"
+  },
+  "devDependencies": {
+    "bfred-npm-bundler": "^1.1.2"
   }
 }
