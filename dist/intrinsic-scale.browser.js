@@ -1,2 +1,2 @@
 /*! npm.im/intrinsic-scale */
-!function(t){"use strict";function n(t){return function(n,i,r,a){var e,o,c=r/a,u=n/i;return(t?c>u:c<u)?(e=n,o=e/c):(o=i,e=o*c),{width:e,height:o,x:(n-e)/2,y:(i-o)/2}}}var i=n(!0),r=n(!1);t.contain=i,t.cover=r}(this.loadImage=this.loadImage||{});
+!function(i){"use strict";function n(i){return function(n,t,c,r){var e,s,u=c/r,a=n/t;return(i?u>a:u<a)?(e=n,s=e/u):(s=t,e=s*u),{width:e,height:s,x:(n-e)/2,y:(t-s)/2}}}var t=n(!0),c=n(!1);i.contain=t,i.cover=c}(this.intrinsicScale=this.intrinsicScale||{});
