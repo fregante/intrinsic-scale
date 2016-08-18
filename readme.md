@@ -1,6 +1,10 @@
-# intrinsic-scale [![module size](https://badge-size.herokuapp.com/bfred-it/intrinsic-scale/master/dist/intrinsic-scale.node.min.js) ![module gzipped size](https://badge-size.herokuapp.com/bfred-it/intrinsic-scale/master/dist/intrinsic-scale.node.min.js?compression=gzip)](https://github.com/bfred-it/intrinsic-scale/blob/master/dist/intrinsic-scale.min.js)
+# intrinsic-scale
 
 > Replicate `background-size: cover/contain` for canvas/CSS/Node/… on any type of media.
+
+[![gzipped size](https://badges.herokuapp.com/size/github/bfred-it/intrinsic-scale/master/dist/intrinsic-scale.browser.js?gzip=true&label=gzipped%20size)](#readme)
+[![Travis build status](https://api.travis-ci.org/bfred-it/intrinsic-scale.svg?branch=master)](https://travis-ci.org/bfred-it/intrinsic-scale)
+[![gzipped size](https://img.shields.io/npm/v/intrinsic-scale.svg)](https://www.npmjs.com/package/intrinsic-scale) 
 
 Given a *original* height and width, and a *desired* height and width, get the `width`, `height`, and `scale` that the *original* object should have to fit the *desired* object.
 
@@ -8,34 +12,37 @@ Many libraries that take care of replicating `background-size`/`object-fit`’s 
 
 This module doesn't concern itself with getting the sizes or applying the values. **You provide numbers, you get numbers.**
 
+## Install
+
+```sh
+npm install --save intrinsic-scale
+```
+
+```js
+import {cover, contain} import ('intrinsic-scale');
+```
+
 ## Usage
 
 ```js
-var peg = {width: 16, height: 9}; // 16:9 peg
-var hole = {height: 100, width: 100}; // square hole
-var pegCoversHole = getIntrinsicScale(peg, hole, true);
-/*==> {
-	scale: 6.25,
-	width: 100,
-	height: 56.25,
-	delta: {
-		height: -43.75
-		width: 0
-	}
-}
+/*
+Given an 50px 50px element in a 100px 200px parent
+To be contains in its parent it must be of size 100px 100px
+and be positioned at 0px 50px to be centered.
 */
+let { width, height, x, y } = contain(100, 200, 50, 50);
+console.log(width, height, x, y);
+//100 100 0 50
 
-var pegFitsInHole = getIntrinsicScale(peg, hole, false);
-/*==> {
-	scale: 11.11,
-	width: 177.77,
-	height: 56.25,
-	delta: {
-		height: 0
-		width: 77.77
-	}
-}
+
+/*
+Given an 50px 50px element in a 100px 200px parent
+To be covered in its parent it must be of size 200px 200px
+and be positioned at -50px 0px to be centered.
 */
+let { width, height, x, y } = cover(100, 200, 50, 50);
+console.log(width, height, x, y);
+//200 200 -50 0
 ```
 
 ## With browserify
@@ -48,27 +55,6 @@ npm install --save intrinsic-scale
 var getIntrinsicScale = require('intrinsic-scale');
 ```
 
-## API
-
-### `getIntrinsicScale(peg, hole[, cover])`
-
-parameter | description
---- | ---
-**`peg`** | Type: `object`, *required* <br> Original width/height of the object to scale
-**`hole`** | Type: `object`, *required* <br> Container that the peg needs to fit into (css:contain) or cover completely (css:cover)
-**`cover`** | Type: `boolean`, *default:true* <br> Whether it should cover the hole (`true`) or fit into it (`false`)
-`@returns` | Type: `object` <br> Size/scale of the peg and its delta with the container (useful to set negative margins, for example). See usage.
- 
-## Files
-
-Here's an explanation of the files included in this repo
-
-* `index.js`: source file, in ES6
-* `dist/intrinsic-scale.js`: browser-ready file with AMD or a global variable called `getIntrinsicScale`
-* `dist/intrinsic-scale.min.js`: same as above, minified
-* `dist/intrinsic-scale.node.js`: used by node/browserify with `require('intrinsic-scale')`
-* `dist/intrinsic-scale.node.min.js`: same as above, but minified, for byte counting only
-
 ## Dependencies
 
 No dependencies. It works in the browser and in node.
@@ -77,7 +63,10 @@ No dependencies. It works in the browser and in node.
 
 * http://www.syfy.com/ascension-quiz/ — Makes media fit a "passport photo" format (*media* being an uploaded image, a photo from Facebook or a webcam grab).
 * http://bfred-it.github.io/art-cropper/ — Crops images making them fill a pre-set area.
+* http://away.gorving.com/ — The video always covers the header
 
 ## License
+
+Forked and extended from https://github.com/sroucheray/contain-cover
 
 MIT © [Federico Brigante](http://twitter.com/bfred_it)

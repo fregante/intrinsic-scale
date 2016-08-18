@@ -4,11 +4,7 @@
   "description": "Replicate `background-size: cover/contain` (scale+crop) for canvas/CSS/Node/… on any type of media.",
   "license": "MIT",
   "repository": "bfred-it/intrinsic-scale",
-  "author": {
-    "name": "Federico Brigante",
-    "email": "bfred-it@users.noreply.github.com",
-    "url": "twitter.com/bfred_it"
-  },
+  "author": "Federico Brigante <bfred-it@users.noreply.github.com> (twitter.com/bfred_it)",
   "keywords": [
     "browser",
     "intrinsic",
@@ -26,19 +22,33 @@
     "css"
   ],
   "files": [
-    "index.js",
-    "dist/intrinsic-scale.node.js"
+    "dist/intrinsic-scale.common-js.js",
+    "dist/intrinsic-scale.es-modules.js"
   ],
-  "main": "dist/intrinsic-scale.node.js",
-  "engines": {
-    "node": ">=0.10.0"
-  },
+  "main": "dist/intrinsic-scale.common-js.js",
+  "jsnext:main": "dist/intrinsic-scale.es-modules.js",
   "scripts": {
-    "build": "./node_modules/bfred-npm-bundler/tasks/all.sh index.js getIntrinsicScale intrinsic-scale",
-    "to-npm": "./node_modules/bfred-npm-bundler/tasks/to-npm.sh index.js intrinsic-scale",
-    "prepublish": "npm run to-npm"
+    "build:js": "bfred-npm-bundler intrinsic-scale intrinsicScale",
+    "build": "npm-run-all --silent jsfix build:*",
+    "jsfix": "xo --fix",
+    "watch:build": "onchange 'index.js' --initial -- npm run build -- --continue-on-error",
+    "watch": "npm-run-all --parallel --silent watch:*",
+    "prepublish": "npm run build",
+    "test": "xo; npm run build"
   },
   "devDependencies": {
-    "bfred-npm-bundler": "^1.1.2"
+    "bfred-npm-bundler": "^7.1.2",
+    "npm-run-all": "^2.3.0",
+    "onchange": "^2.5.0",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "esnext": true,
+    "env": [
+      "browser"
+    ],
+    "rules": {
+      "prefer-spread": 0
+    }
   }
 }
