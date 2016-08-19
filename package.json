@@ -1,6 +1,6 @@
 {
   "name": "intrinsic-scale",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Replicate background-size: cover/contain (scale+crop) for canvas/CSS/Node/… on any type of media.",
   "license": "MIT",
   "repository": "bfred-it/intrinsic-scale",
