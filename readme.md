@@ -19,7 +19,7 @@ npm install --save intrinsic-scale
 ```
 
 ```js
-import {cover, contain} import ('intrinsic-scale');
+import {cover, contain} from 'intrinsic-scale';
 ```
 
 ## Usage
