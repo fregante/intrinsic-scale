@@ -45,16 +45,6 @@ console.log(width, height, x, y);
 //200 200 -50 0
 ```
 
-## With browserify
-
-```sh
-npm install --save intrinsic-scale
-```
-
-```js
-var getIntrinsicScale = require('intrinsic-scale');
-```
-
 ## Dependencies
 
 No dependencies. It works in the browser and in node.
