@@ -2,14 +2,12 @@ function fit(contains) {
 	return (parentWidth, parentHeight, childWidth, childHeight) => {
 		const doRatio = childWidth / childHeight;
 		const cRatio = parentWidth / parentHeight;
-		let width;
-		let height;
+		let width = parentWidth;
+		let height = parentHeight;
 
 		if (contains ? (doRatio > cRatio) : (doRatio < cRatio)) {
-			width = parentWidth;
 			height = width / doRatio;
 		} else {
-			height = parentHeight;
 			width = height * doRatio;
 		}
 
