@@ -34,12 +34,17 @@
     "watch:build": "onchange 'index.js' --initial -- npm run build -- --continue-on-error",
     "watch": "npm-run-all --parallel --silent watch:*",
     "prepublish": "npm run build",
-    "test": "xo; npm run build"
+    "test": "xo && jest; npm run build"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-core": "^7.0.0-bridge.0",
     "bfred-npm-bundler": "^7.1.2",
+    "jest": "^23.6.0",
     "npm-run-all": "^2.3.0",
     "onchange": "^2.5.0",
+    "regenerator-runtime": "^0.13.1",
     "xo": "^0.16.0"
   },
   "xo": {
@@ -49,6 +54,12 @@
     ],
     "rules": {
       "prefer-spread": 0
-    }
+    },
+    "overrides": [{
+      "files": "*.test.js",
+      "rules": {
+        "no-undef": "off"
+      }
+    }]
   }
 }
