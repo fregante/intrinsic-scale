@@ -1,6 +1,8 @@
 function fit(contains) {
 	return (parentWidth, parentHeight, childWidth, childHeight) => {
-		const doRatio = childWidth / childHeight;
+		const doRatio = typeof childHeight === 'number' ?
+			childWidth / childHeight :
+			childWidth;
 		const cRatio = parentWidth / parentHeight;
 		let width = parentWidth;
 		let height = parentHeight;
