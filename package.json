@@ -44,7 +44,6 @@
     "jest": "^23.6.0",
     "npm-run-all": "^2.3.0",
     "onchange": "^2.5.0",
-    "regenerator-runtime": "^0.13.1",
     "xo": "^0.16.0"
   },
   "xo": {
@@ -55,11 +54,18 @@
     "rules": {
       "prefer-spread": 0
     },
-    "overrides": [{
-      "files": "*.test.js",
-      "rules": {
-        "no-undef": "off"
+    "overrides": [
+      {
+        "files": "*.test.js",
+        "rules": {
+          "no-undef": "off"
+        }
       }
-    }]
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }
