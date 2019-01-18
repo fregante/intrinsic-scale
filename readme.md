@@ -51,7 +51,6 @@ No dependencies. It works in the browser and in node.
 
 ## Used on
 
-* http://www.syfy.com/ascension-quiz/ — Makes media fit a "passport photo" format (*media* being an uploaded image, a photo from Facebook or a webcam grab).
 * http://bfred-it.github.io/art-cropper/ — Crops images making them fill a pre-set area.
 * http://away.gorving.com/ — The video always covers the header
 
