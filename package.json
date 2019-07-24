@@ -1,6 +1,6 @@
 {
   "name": "intrinsic-scale",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Replicate background-size: cover/contain (scale+crop) for canvas/CSS/Node/… on any type of media.",
   "keywords": [
     "background-size",
