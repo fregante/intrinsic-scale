@@ -2,9 +2,9 @@
 
 > Replicate `background-size: cover/contain` for canvas/CSS/Node/… on any type of media.
 
-[![gzipped size](https://badges.herokuapp.com/size/github/bfred-it/intrinsic-scale/master/dist/intrinsic-scale.browser.js?gzip=true&label=gzipped%20size)](#readme)
-[![Travis build status](https://api.travis-ci.org/bfred-it/intrinsic-scale.svg?branch=master)](https://travis-ci.org/bfred-it/intrinsic-scale)
-[![gzipped size](https://img.shields.io/npm/v/intrinsic-scale.svg)](https://www.npmjs.com/package/intrinsic-scale) 
+[![gzipped size](https://badges.herokuapp.com/size/github/fregante/intrinsic-scale/master/dist/intrinsic-scale.browser.js?gzip=true&label=gzipped%20size)](#readme)
+[![Travis build status](https://api.travis-ci.org/fregante/intrinsic-scale.svg?branch=master)](https://travis-ci.org/fregante/intrinsic-scale)
+[![gzipped size](https://img.shields.io/npm/v/intrinsic-scale.svg)](https://www.npmjs.com/package/intrinsic-scale)
 
 Given a *original* height and width, and a *desired* height and width, get the `width`, `height`, and `scale` that the *original* object should have to fit the *desired* object.
 
@@ -51,11 +51,11 @@ No dependencies. It works in the browser and in node.
 
 ## Used on
 
-* http://bfred-it.github.io/art-cropper/ — Crops images making them fill a pre-set area.
-* http://away.gorving.com/ — The video always covers the header
+* https://fregante.github.io/art-cropper/ — Crops images making them fill a pre-set area.
+* https://away.gorving.com/ — The video always covers the header
 
 ## License
 
 Forked and extended from https://github.com/sroucheray/contain-cover
 
-MIT © [Federico Brigante](http://twitter.com/bfred_it)
+MIT © [Federico Brigante](https://bfred.it)
