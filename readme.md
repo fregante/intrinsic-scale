@@ -1,12 +1,9 @@
-# intrinsic-scale
+# intrinsic-scale [![npm version](https://img.shields.io/npm/v/intrinsic-scale.svg)][link-npm] [![(size)][badge-gzip]](#no-link)
+
+[badge-gzip]: https://img.shields.io/bundlephobia/minzip/intrinsic-scale.svg?label=gzipped
+[link-npm]: https://www.npmjs.com/package/intrinsic-scale
 
 > Replicate `background-size: cover/contain` for canvas/CSS/Node/… on any type of media.
-
-[![gzipped size](https://badges.herokuapp.com/size/github/fregante/intrinsic-scale/master/dist/intrinsic-scale.browser.js?gzip=true&label=gzipped%20size)](#readme)
-[![Travis build status](https://api.travis-ci.org/fregante/intrinsic-scale.svg?branch=master)](https://travis-ci.org/fregante/intrinsic-scale)
-[![gzipped size](https://img.shields.io/npm/v/intrinsic-scale.svg)](https://www.npmjs.com/package/intrinsic-scale)
-
-Given a *original* height and width, and a *desired* height and width, get the `width`, `height`, and `scale` that the *original* object should have to fit the *desired* object.
 
 Many libraries that take care of replicating `background-size`/`object-fit`’s `cover`/`contain` have this functionality embedded. You can use this function anywhere, from the browser to calculate sizing on a canvas, to node when doing some image file resizing.
 
