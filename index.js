@@ -1,24 +1,23 @@
-function fit(contains) {
-	return (parentWidth, parentHeight, childWidth, childHeight) => {
-		const doRatio = childWidth / childHeight;
-		const cRatio = parentWidth / parentHeight;
-		let width = parentWidth;
-		let height = parentHeight;
+export default function resizeToFit(mode, source, target) {
+	if (mode !== 'cover' && mode !== 'contain') {
+		throw new Error('Invalid mode');
+	}
 
-		if (contains ? (doRatio > cRatio) : (doRatio < cRatio)) {
-			height = width / doRatio;
-		} else {
-			width = height * doRatio;
-		}
+	const sourceRatio = source.width / source.height;
+	const targetRatio = target.width / target.height;
+	let {width} = target;
+	let {height} = target;
 
-		return {
-			width,
-			height,
-			x: (parentWidth - width) / 2,
-			y: (parentHeight - height) / 2,
-		};
+	if (mode === 'contain' ? (sourceRatio > targetRatio) : (sourceRatio < targetRatio)) {
+		height = width / sourceRatio;
+	} else {
+		width = height * sourceRatio;
+	}
+
+	return {
+		width,
+		height,
+		x: (target.width - width) / 2,
+		y: (target.height - height) / 2,
 	};
 }
-
-export const contain = fit(true);
-export const cover = fit(false);
