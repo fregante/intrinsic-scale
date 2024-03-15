@@ -5,8 +5,6 @@
 
 > Replicate `background-size: cover/contain` for canvas/CSS/Node/… on any type of media.
 
-Given a *original* height and width, and a *desired* height and width, get the `width`, `height`, and `scale` that the *original* object should have to fit the *desired* object.
-
 Many libraries that take care of replicating `background-size`/`object-fit`’s `cover`/`contain` have this functionality embedded. You can use this function anywhere, from the browser to calculate sizing on a canvas, to node when doing some image file resizing.
 
 This module doesn't concern itself with getting the sizes or applying the values. **You provide numbers, you get numbers.**

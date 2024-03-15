@@ -24,7 +24,8 @@
   "author": "Federico Brigante <me@fregante.com> (https://fregante.com)",
   "exports": "./index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "scripts": {
     "test": "xo && vitest"
