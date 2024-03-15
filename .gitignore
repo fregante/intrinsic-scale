@@ -8,6 +8,4 @@ Thumbs.db
 *.log
 logs
 package-lock.json
-
-*.common-js.js
-*.es-modules.js
+distribution
