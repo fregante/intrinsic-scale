@@ -15,7 +15,7 @@ function fit(contains) {
 			width,
 			height,
 			x: (parentWidth - width) / 2,
-			y: (parentHeight - height) / 2
+			y: (parentHeight - height) / 2,
 		};
 	};
 }

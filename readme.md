@@ -52,10 +52,7 @@ No dependencies. It works in the browser and in node.
 ## Used on
 
 * https://fregante.github.io/art-cropper/ — Crops images making them fill a pre-set area.
-* https://away.gorving.com/ — The video always covers the header
 
 ## License
 
-Forked and extended from https://github.com/sroucheray/contain-cover
-
-MIT © [Federico Brigante](https://bfred.it)
+MIT © [Federico Brigante](https://fregante.com)
