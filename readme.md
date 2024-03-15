@@ -16,7 +16,7 @@ npm install intrinsic-scale
 ```
 
 ```js
-import {cover, contain} from 'intrinsic-scale';
+import resizeToFit from 'intrinsic-scale';
 ```
 
 ## Usage
@@ -24,10 +24,12 @@ import {cover, contain} from 'intrinsic-scale';
 ```js
 /*
 Given an 50px 50px element in a 100px 200px parent
-To be contains in its parent it must be of size 100px 100px
+To be contained by its parent it must be of size 100px 100px
 and be positioned at 0px 50px to be centered.
 */
-let { width, height, x, y } = contain(100, 200, 50, 50);
+const source = {width: 50, y: 50};
+const target = {width: 100, height: 200};
+const { width, height, x, y } = resizeToFit('contain', source, target);
 console.log(width, height, x, y);
 //100 100 0 50
 
@@ -37,7 +39,9 @@ Given an 50px 50px element in a 100px 200px parent
 To be covered in its parent it must be of size 200px 200px
 and be positioned at -50px 0px to be centered.
 */
-let { width, height, x, y } = cover(100, 200, 50, 50);
+const source = {width: 50, y: 50};
+const target = {width: 100, height: 200};
+const { width, height, x, y } = resizeToFit('cover', source, target);
 console.log(width, height, x, y);
 //200 200 -50 0
 ```
