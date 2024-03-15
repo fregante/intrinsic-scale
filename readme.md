@@ -15,7 +15,7 @@ This module doesn't concern itself with getting the sizes or applying the values
 ## Install
 
 ```sh
-npm install --save intrinsic-scale
+npm install intrinsic-scale
 ```
 
 ```js
