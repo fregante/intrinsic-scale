@@ -1,6 +1,6 @@
 export default function resizeToFit(mode, source, target) {
 	if (mode !== 'cover' && mode !== 'contain') {
-		throw new Error('Invalid mode');
+		throw new TypeError('Invalid mode');
 	}
 
 	const sourceRatio = source.width / source.height;

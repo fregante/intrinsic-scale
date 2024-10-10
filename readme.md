@@ -53,7 +53,3 @@ No dependencies. It works in the browser and in node.
 ## Used on
 
 * https://fregante.github.io/art-cropper/ — Crops images making them fill a pre-set area.
-
-## License
-
-MIT © [Federico Brigante](https://fregante.com)

@@ -18,7 +18,7 @@
     "video",
     "webcam"
   ],
-  "repository": "fregante/intrinsic-scale",
+  "repository": "https://github.com/fregante/intrinsic-scale",
   "funding": "https://github.com/sponsors/fregante",
   "license": "MIT",
   "author": "Federico Brigante <me@fregante.com> (https://fregante.com)",
